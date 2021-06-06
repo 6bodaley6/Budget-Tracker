@@ -1,10 +1,18 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+// // mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true, useUnifiedTopology: true });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+  // we're connected!
+});
+
 const compression = require("compression");
 
 const PORT = process.env.PORT || 3001;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget-tracker"
+// // const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget-tracker";
 
 const app = express();
 
@@ -18,11 +26,15 @@ app.use(express.static("public"));
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useUnifiedTopology: true
 });
 
 // routes
 app.use(require("./routes/api.js"));
+
+// Use this to log mongo queries being executed!
+mongoose.set('debug', true);
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
