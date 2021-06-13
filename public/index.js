@@ -136,7 +136,7 @@ document.querySelector("#add-btn").onclick = function () {
 document.querySelector("#sub-btn").onclick = function () {
     sendTransaction(false);
 };
-
+//https://developers.google.com/web/fundamentals/app-install-banners/native
 //!! chrome will fire beforeinstallprompt to ask user to download adding button to click in index.html
 let deferredPrompt;
 
