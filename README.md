@@ -26,15 +26,11 @@ This is Licensed under the license
 
 ## Usage
 
-To keep you budget up to date with no internet connection.
+To keep your budget up to date with no internet connection.
 
-## Credits
+## Deployed App URL
 
-## Contributing
-
-## Tests
-
-none
+[Heroku - Budget-Tracker](https://git.heroku.com/tudget-bracker.git)
 
 ## Questions
 
