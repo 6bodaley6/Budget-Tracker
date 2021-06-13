@@ -22,6 +22,6 @@
   "description": "An application to track your budget without internet",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "start_url": "https://git.heroku.com/tudget-bracker.git",
+  "start_url": "https://tudget-bracker.herokuapp.com",
   "display": "standalone"
 }
