@@ -1,6 +1,12 @@
 {
   "name": "Budget-Tracker",
-  "short_name": "Budget-Tracker",
+  "short_name": "Budget",
+  "description": "progressive web app for tracking finances with or without internet",
+  "orientation": "any",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "start_url": "https://tudget-bracker.herokuapp.com",
+  "display": "standalone",
   "icons": [
     {
       "src": "icons/icon-512x512.png",
@@ -18,10 +24,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "description": "An application to track your budget without internet",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "start_url": "https://tudget-bracker.herokuapp.com",
-  "display": "standalone"
+  ]
 }
