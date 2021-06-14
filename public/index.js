@@ -138,17 +138,14 @@ document.querySelector("#sub-btn").onclick = function () {
 };
 //https://developers.google.com/web/fundamentals/app-install-banners/native
 //!! chrome will fire before installprompt to ask user to download adding button to click in index.html
-// // let deferredPrompt;
+let deferredPrompt;
 
-// // window.addEventListener('beforeinstallprompt', (e) => {
-// //     // Prevent Chrome 67 and earlier from automatically showing the prompt
-// //     e.preventDefault();
-// //     // Stash the event so it can be triggered later.
-// //     deferredPrompt = e;
-// //     // Update UI notify the user they can add to home screen
-// //     // btnAdd.style.display = 'block';
-// // });
-// // document.querySelector("#deffered-prompt").onclick = function (deferredPrompt()) {
-// //     console.log("THIS MESSAGE IS FOR BO DEBUGGING")
-// // }
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // Update UI notify the user they can add to home screen
+    // btnAdd.style.display = 'block';
+});
 //!!
