@@ -11,12 +11,6 @@
       "src": "icons/maskable_icon_512x512.png",
       "sizes": "512x512",
       "type": "image/png"
-    },
-    {
-      "src": "icons/maskable_icon_512x512.png",
-      "sizes": "196x196",
-      "type": "image/png",
-      "purpose": "maskable"
     }
   ],
   "start_url": "../startpoint.html",
@@ -24,12 +18,5 @@
   "orientation": "any",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "display": "standalone",
-  "prefer_related_applications": true,
-  "related_applications": [
-    {
-      "platform": "play",
-      "id": "com.google.samples.apps.iosched"
-    }
-  ]
+  "display": "standalone"
 }
