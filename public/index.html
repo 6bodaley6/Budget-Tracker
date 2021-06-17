@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#317EFB" />
-    <link rel="apple-touch-icon" href="/public/icons/maskable_icon_x192.png" />
-    <link rel="manifest" href="/static/manifest.webmanifest" />
     <meta
       name="description"
       content="Budget tracker with offline functionality for when you dont have a connection to the internet"
     />
+    <link rel="apple-touch-icon" href="/public/icons/maskable_icon_x192.png" />
+    <link rel="manifest" href="/manifest.json" />
     <link
       rel="shortcut icon"
       href="icons/maskable_icon_x192.png"
@@ -64,6 +64,18 @@
     <script>
       (function () {
         if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("./service-worker.js")
+            .then(() => console.log("Service Worker registered successfully."))
+            .catch((error) =>
+              console.log("Service Worker registration failed:", error)
+            );
+        }
+      })();
+    </script>
+    <!-- <script>
+      (function () {
+        if ("serviceWorker" in navigator) {
           window.addEventListener("load", () => {
             navigator.serviceWorker
               .register("service-worker.js")
@@ -77,6 +89,6 @@
           });
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>
